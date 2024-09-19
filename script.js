@@ -1,6 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   loadSavedData();
 
+  var tooltipInputs = document.querySelectorAll(".tooltip-input");
+
+  tooltipInputs.forEach(function (input) {
+    // Initialize the title attribute with the input's current value
+    input.title = input.value;
+
+    // If inputs are editable, update the title on input events
+    input.addEventListener("input", function () {
+      input.title = input.value;
+    });
+  });
+
   // Save data alerts for user and call to save function.
   var saveButton = document.getElementById("saveButton");
   if (saveButton) {
@@ -246,4 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
   calculateCurrentWeight();
   updateDerivedStats();
   updateLevelAndRequiredXP();
+
+  // **Autosave Feature: Save data every 5 seconds (5000 milliseconds)**
+  setInterval(saveData, 2500);
 });
