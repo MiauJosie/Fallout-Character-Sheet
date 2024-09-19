@@ -522,12 +522,12 @@ textarea {
 #strengthStat {
   position: absolute;
   z-index: 2;
-  width: 2rem;
+  width: 2.5rem;
   height: 3rem;
   margin-top: 3.85rem;
   margin-left: -33.2rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: bold;
 }
@@ -544,12 +544,12 @@ textarea {
 #perceptionStat {
   position: absolute;
   z-index: 2;
-  width: 2rem;
+  width: 2.5rem;
   height: 3rem;
   margin-top: 3.85rem;
   margin-left: -22.1rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: bold;
 }
@@ -566,12 +566,12 @@ textarea {
 #enduranceStat {
   position: absolute;
   z-index: 2;
-  width: 2rem;
+  width: 2.5rem;
   height: 3rem;
   margin-top: 3.85rem;
   margin-left: -11rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: bold;
 }
@@ -588,12 +588,12 @@ textarea {
 #charismaStat {
   position: absolute;
   z-index: 2;
-  width: 2rem;
+  width: 2.5rem;
   height: 3rem;
   margin-top: 3.85rem;
   margin-left: 0rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: bold;
 }
@@ -610,12 +610,12 @@ textarea {
 #intelligenceStat {
   position: absolute;
   z-index: 2;
-  width: 2rem;
+  width: 2.5rem;
   height: 3rem;
   margin-top: 3.85rem;
   margin-left: 11.1rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: bold;
 }
@@ -634,12 +634,12 @@ textarea {
 #agilityStat {
   position: absolute;
   z-index: 2;
-  width: 2rem;
+  width: 2.5rem;
   height: 3rem;
   margin-top: 3.85rem;
   margin-left: 22.14rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: bold;
 }
@@ -658,12 +658,12 @@ textarea {
 #luckStat {
   position: absolute;
   z-index: 2;
-  width: 2rem;
+  width: 2.5rem;
   height: 3rem;
   margin-top: 3.85rem;
   margin-left: 33.2rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: italic;
   font-weight: bold;
 }
