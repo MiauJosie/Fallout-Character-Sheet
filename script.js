@@ -259,6 +259,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updateDerivedStats();
   updateLevelAndRequiredXP();
 
-  // **Autosave Feature: Save data every 5 seconds (5000 milliseconds)**
-  setInterval(saveData, 2500);
+  // **Autosave Feature: Save data every 0.5 seconds (500 milliseconds)**
+  setInterval(saveData, 500);
 });
