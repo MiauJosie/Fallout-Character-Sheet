@@ -622,12 +622,12 @@
                             <td><input type="number" class="weight" name="itemWeight14"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="Item15"></td>
-                            <td><input type="number" class="weight" name="itemWeight15"></td>
+                            <td id="currentWeight">CURRENT CARRY WEIGHT</td>
+                            <td><input type="number" name="currentCarryWeight" class="currentCarryWeight" value="0" min="0" disabled></td>
                         </tr>
                         <tr>
-                            <td id="currentWeight">CURRENT CARRY WEIGHT</td>
-                            <td><input type="number" name="currentCarryWeight" class="currentCarryWeight" value="0" disabled></td>
+                            <td id="currentWeight">MODIFIER +</td>
+                            <td><input id="maxCarryWeightMod" type="number" name="maxCarryWeightMod" class="maxCarryWeightMod" value="0" min="0"></td>
                         </tr>
                         <tr>
                             <td id="maxWeight">MAXIMUM CARRY WEIGHT</td>
@@ -815,16 +815,16 @@
                             <td><input type="number" class="weight" name="2itemWeight17"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="2Item18"></td>
-                            <td><input type="number" class="weight" name="2itemWeight18"></td>
+                            <td id="currentWeight2">CURRENT CARRY WEIGHT</td>
+                            <td><input type="number" name="2currentCarryWeight" class="currentCarryWeight" value="0" min="0" disabled></td>
                         </tr>
                         <tr>
-                            <td id="currentWeight2">CURRENT CARRY WEIGHT</td>
-                            <td><input type="number" class="currentCarryWeight" name="2currentCarryWeight" value="0" disabled></td>
+                            <td id="currentWeight">MODIFIER +</td>
+                            <td><input id="maxCarryWeightMod2" type="number" name="2maxCarryWeightMod" class="maxCarryWeightMod" value="0" min="0"></td>
                         </tr>
                         <tr>
                             <td id="maxWeight2">MAXIMUM CARRY WEIGHT</td>
-                            <td><input type="number" class="maxCarryWeight" name="2maxCarryWeight" value="160" disabled>
+                            <td><input type="number" name="2maxCarryWeight" class="maxCarryWeight" value="160" disabled>
                             </td>
                         </tr>
                     </table>

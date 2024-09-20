@@ -17,13 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var saveButton = document.getElementById("saveButton");
   if (saveButton) {
     saveButton.addEventListener("click", function () {
-      var confirmation = window.confirm(
-        '"Pip-Boy: Would you like to record your data?"'
-      );
-      if (confirmation) {
-        saveData();
-        alert('"Data recorded successfully!"');
-      }
+      saveData();
     });
   }
 
@@ -35,11 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!resetClicked) {
         resetClicked = true;
         var confirmation = window.confirm(
-          '"Pip-Boy: Would you like to reset your data?"'
+          "Pip-Boy: Would you like to reset your data?"
         );
         if (confirmation) {
           resetData();
-          alert('"Pip-Boy: Data reset successfully!"');
           location.reload();
         } else {
           resetClicked = false;
@@ -101,16 +94,55 @@ document.addEventListener("DOMContentLoaded", function () {
       if (input.type === "checkbox") {
         input.checked = false;
       } else {
-        input.value = "";
+        // Check if the input has the class 'maxCarryWeightMod'
+        if (input.classList.contains("maxCarryWeightMod")) {
+          input.value = 0; // Set to default value 0
+        } else {
+          input.value = ""; // Clear other inputs
+        }
       }
     });
   }
+
+  // Flags to prevent infinite loops during synchronization
+  let isSyncing = false;
+
+  // Function to synchronize maxCarryWeightMod inputs
+  function syncMaxCarryWeightMods(changedInput) {
+    if (isSyncing) return;
+    isSyncing = true;
+    var newValue = changedInput.value;
+    // Select all other maxCarryWeightMod inputs and update their values
+    document.querySelectorAll(".maxCarryWeightMod").forEach(function (input) {
+      if (input !== changedInput) {
+        input.value = newValue;
+      }
+    });
+    isSyncing = false;
+    updateMaxCarryWeight();
+    calculateCurrentWeight(); // Recalculate if necessary
+  }
+
+  // Add event listeners to all maxCarryWeightMod inputs to synchronize them
+  var maxCarryWeightModInputs = document.querySelectorAll(".maxCarryWeightMod");
+  maxCarryWeightModInputs.forEach(function (modInput) {
+    modInput.addEventListener("input", function () {
+      syncMaxCarryWeightMods(modInput);
+    });
+  });
 
   // Function to calculate character's maximum carry weight based on Strength stat.
   function updateMaxCarryWeight() {
     var strengthStat =
       parseInt(document.getElementById("strengthStat").value) || 0;
-    var maxCarryWeight = 150 + strengthStat * 10;
+
+    // Since all maxCarryWeightMod inputs are synchronized, take the value from the first one
+    var firstModInput = document.querySelector(".maxCarryWeightMod");
+    var maxCarryWeightMod = firstModInput
+      ? parseInt(firstModInput.value) || 0
+      : 0;
+
+    var maxCarryWeight = maxCarryWeightMod + 150 + strengthStat * 10;
 
     // Select all inputs with the class 'maxCarryWeight'
     var maxCarryWeightInputs = document.querySelectorAll(".maxCarryWeight");
