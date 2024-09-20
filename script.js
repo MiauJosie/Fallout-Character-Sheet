@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to calculate required xp for next level.
   function calculateRequiredXP(level) {
     level = Math.max(level, 1);
-    if (level === 1) {
+    if (level === 2) {
       return 100;
     } else {
       return ((level * (level - 1)) / 2) * 100;
