@@ -50,8 +50,9 @@ main {
   font-weight: bold;
   padding: 0.2rem 1rem 0.2rem 1rem;
   position: absolute;
-  margin-top: 13.5rem;
-  margin-left: 34.15rem;
+  margin-top: 51rem;
+  margin-left: 20rem;
+  appearance: none;
 }
 
 #resetButton {
@@ -61,7 +62,7 @@ main {
   padding: 0.2rem 1rem 0.2rem 1rem;
   position: absolute;
   margin-top: 51rem;
-  margin-left: 36rem;
+  margin-left: 15rem;
 }
 
 #back {
