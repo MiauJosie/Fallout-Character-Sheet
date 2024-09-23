@@ -205,8 +205,49 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to calculate required xp for next level.
   function calculateRequiredXP(level) {
     level = Math.max(level, 1);
-    if (level === 2) {
-      return 100;
+    if (level < 21) {
+      switch (level) {
+        case 1:
+          return 100;
+        case 2:
+          return 300;
+        case 3:
+          return 600;
+        case 4:
+          return 1000;
+        case 5:
+          return 1500;
+        case 6:
+          return 2100;
+        case 7:
+          return 2800;
+        case 8:
+          return 3600;
+        case 9:
+          return 4500;
+        case 10:
+          return 5500;
+        case 11:
+          return 6600;
+        case 12:
+          return 7800;
+        case 13:
+          return 9100;
+        case 14:
+          return 10500;
+        case 15:
+          return 12000;
+        case 16:
+          return 13600;
+        case 17:
+          return 15300;
+        case 18:
+          return 17100;
+        case 19:
+          return 19000;
+        case 20:
+          return 21000;
+      }
     } else {
       return ((level * (level - 1)) / 2) * 100;
     }
